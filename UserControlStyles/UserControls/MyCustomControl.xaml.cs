@@ -11,16 +11,25 @@ public partial class MyCustomControl : ContentView
     public MyCustomControl()
 	{
 		InitializeComponent();
+        // Set default values for the properties
         UpTextLabel.Text = UpperText;
         UpRectangle.Fill = UpperRectColor;
     }
 
     private static void OnUpperTextChanged(BindableObject d, object oldValue, object newValue)
     {
+        var control = (MyCustomControl)d;
+        if(control == null || control.UpTextLabel == null)
+            return;
+        control.UpTextLabel.Text = (string)newValue;
     }
 
     private static void OnUpperRectColorChanged(BindableObject d, object oldValue, object newValue)
     {
+        var control = (MyCustomControl)d;
+        if (control == null || control.UpRectangle == null)
+            return;
+        control.UpRectangle.Fill = (Brush)newValue;
     }
 
     public string UpperText

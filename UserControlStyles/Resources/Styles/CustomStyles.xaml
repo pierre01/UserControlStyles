@@ -10,5 +10,10 @@
         <Setter Property="UpperRectColor" Value="Red" />
     </Style>
 
+    <Style x:Key="SpecialStyle" TargetType="uc:MyCustomControl">
+        <Setter Property="UpperText" Value="SpecialStyledText" />
+        <Setter Property="UpperRectColor" Value="Green" />
+    </Style>
+
 
 </ResourceDictionary>

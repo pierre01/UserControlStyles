@@ -8,11 +8,14 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
+            
             <uc:MyCustomControl
-                x:Name="MyCustomControl"
-                Margin="0,0,0,20"
-                SemanticProperties.HeadingLevel="Level1"
-                SemanticProperties.Description="This is a custom control with two rectangles and labels." />
+                Margin="0,0,0,20" />
+            
+            <uc:MyCustomControl
+                Style="{StaticResource SpecialStyle}"
+                Margin="0,0,0,20" />
+            
             <Image
                 Source="dotnet_bot.png"
                 HeightRequest="185"
